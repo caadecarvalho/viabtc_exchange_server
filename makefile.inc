@@ -1,8 +1,8 @@
 SOURCE  := $(wildcard *.c)
 OBJS    := $(patsubst %.c, %.o, $(SOURCE))
 CC      := gcc
-CFLAGS  := -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99
-LFLAGS  := -g -rdynamic
+CFLAGS  := -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99 -no-pie
+LFLAGS  := -g -rdynamic -no-pie
 
 
 .PHONY : all clean install 

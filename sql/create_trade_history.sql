@@ -1,3 +1,5 @@
+USE hce_tradehistory_01;
+
 CREATE TABLE `balance_history_example` (
     `id`            BIGINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `time`          DOUBLE NOT NULL,

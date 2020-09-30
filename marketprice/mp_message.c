@@ -875,23 +875,29 @@ static int64_t get_message_offset(void)
 
 int init_message(void)
 {
+    printf("starting init_message");
     int ret;
+    printf("starting creating sentinel");
     redis = redis_sentinel_create(&settings.redis);
     if (redis == NULL)
         return -__LINE__;
+    printf("redis");
     ret = init_market();
     if (ret < 0) {
         return ret;
     }
+    printf("init_market");
     last_offset = get_message_offset();
     if (last_offset < 0) {
         return -__LINE__;
     }
+    printf("last_offset");
     settings.deals.offset = last_offset + 1;
     deals = kafka_consumer_create(&settings.deals, on_deals_message);
     if (deals == NULL) {
         return -__LINE__;
     }
+    printf("deals");
 
     nw_timer_set(&market_timer, 10, true, on_market_timer, NULL);
     nw_timer_start(&market_timer);

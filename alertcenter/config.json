@@ -15,11 +15,9 @@
         "max_pkg_size": 10240
     },
     "redis": {
-        "name": "mymaster",
+        "name": "hce-redis-marketprice-01",
         "addr": [
-            "127.0.0.1:26381",
-            "127.0.0.1:26382",
-            "127.0.0.1:26383"
+            "hce-redis-marketprice-01.054ncr.clustercfg.use1.cache.amazonaws.com:6379"        
         ]
     }
 }

@@ -24,16 +24,16 @@
     },
     "cli": "tcp@127.0.0.1:7317",
     "db_log": {
-        "host": "localhost",
-        "user": "user",
-        "pass": "pass",
-        "name": "trade_log"
+        "host": "hce-tradehistory-01.c65diftnfea9.us-east-1.rds.amazonaws.com",
+        "user": "admin",
+        "pass": "ZaQxSw2020..",
+        "name": "hce_tradehistory_01"
     },
     "db_history": {
-        "host": "localhost",
-        "user": "user",
-        "pass": "pass",
-        "name": "trade_history"
+        "host": "hce-tradehistory-01.c65diftnfea9.us-east-1.rds.amazonaws.com",
+        "user": "admin",
+        "pass": "ZaQxSw2020..",
+        "name": "hce_tradehistory_01"
     },
     "assets": [
         {
@@ -150,7 +150,7 @@
             "min_amount": "0.001"
         }
     ],
-    "brokers": "127.0.0.1:9092",
+    "brokers": "b-1.test.1d7h06.c12.kafka.us-east-1.amazonaws.com:9092",
     "slice_interval": 3600,
     "slice_keeptime": 259200 
 }

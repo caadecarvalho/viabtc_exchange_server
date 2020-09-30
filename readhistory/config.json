@@ -23,10 +23,10 @@
         "heartbeat_check": false
     },
     "db_history": {
-        "host": "localhost",
-        "user": "user",
-        "pass": "pass",
-        "name": "trade_history"
+        "host": "hce-tradehistory-01.c65diftnfea9.us-east-1.rds.amazonaws.com",
+        "user": "admin",
+        "pass": "ZaQxSw2020..",
+        "name": "hce_tradehistory_01"
     },
     "worker_num": 10
 }

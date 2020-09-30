@@ -5,8 +5,8 @@ import time
 import boto3
 from redis.sentinel import Sentinel
 
-ALERT_EMAILS = ['yang@haipo.me']
-REDIS_SENTINEL_LIST = [("192.168.0.62", 26379), ("192.168.0.63", 26379), ("192.168.0.64", 26379)]
+ALERT_EMAILS = ['carlos.carvalho@hurst.capital']
+REDIS_SENTINEL_LIST = [("hce-redis-marketprice-01.054ncr.clustercfg.use1.cache.amazonaws.com", 6379), ]
 
 def send_email(to_address, subject, content):
     ses = boto3.client('ses')

@@ -62,32 +62,42 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    printf("starting inits...\n");
     int ret;
     ret = init_mpd();
+    printf("init_mpd: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "init mpd fail: %d", ret);
     }
     ret = init_config(argv[1]);
+    printf("init_config: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "load config fail: %d", ret);
     }
     ret = init_process();
+    printf("init_process: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "init process fail: %d", ret);
     }
     ret = init_log();
+    printf("init_log: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "init log fail: %d", ret);
     }
 
+    printf("worked\n");
     daemon(1, 1);
+    printf("daemon\n");
     process_keepalive();
 
+    printf("keep_alive\n");
     ret = init_message();
+    printf("init_message: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "init message fail: %d", ret);
     }
     ret = init_server();
+    printf("init_server: %d\n", ret);
     if (ret < 0) {
         error(EXIT_FAILURE, errno, "init server fail: %d", ret);
     }
@@ -97,6 +107,7 @@ int main(int argc, char *argv[])
 
     log_vip("server start");
     log_stderr("server start");
+    printf("server_started\n");
     nw_loop_run();
     log_vip("server stop");
 

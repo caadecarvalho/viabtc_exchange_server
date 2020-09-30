@@ -20,19 +20,17 @@
         ],
         "buf_limit": 100,
         "max_pkg_size": 1000000,
-        "heartbeat_check": false
+        "heartbeat_check": false 
     },
     "deals": {
-        "brokers": "127.0.0.1:9092",
+        "brokers": "b-1.test.1d7h06.c12.kafka.us-east-1.amazonaws.com:9092",
         "topic": "deals",
         "partition": 0
     },
     "redis": {
-        "name": "mymaster",
+        "name": "hce-redis-marketprice-01",
         "addr": [
-            "127.0.0.1:26381",
-            "127.0.0.1:26382",
-            "127.0.0.1:26383"
+            "hce-redis-marketprice-01.054ncr.clustercfg.use1.cache.amazonaws.com:6379"
         ]
     },
     "accesshttp": "http://127.0.0.1:8080"
